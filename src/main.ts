@@ -7,6 +7,10 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
+import { createPinia } from 'pinia'
+
+const pinia = createPinia()
+
 import App from './App.vue'
 import router from './router'
 
@@ -26,5 +30,6 @@ const app = createApp(App)
 
 app.use(router)
 app.use(vuetify)
+app.use(pinia)
 
 app.mount('#app')
